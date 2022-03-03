@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: #EDE574;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E1F5C4, #EDE574);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E1F5C4, #EDE574);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* #FFFFFF, #FF2853, #F5EBE6 */
+:root {
+    --pg-color: #FF2853;
+    --sec-color: #F5EBE6;
+    --tri-color: #FFFFFF;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+
+}
+
+header picture {
+    margin-right: 5%;
+}
+
+nav {
+    width: 45%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.links {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5em;
+    padding: 1%;
+    cursor: pointer;
+}
+
+nav :hover {
+    transform: scale(1.2);
+    transition: all .35s linear;
+}
+
+.active {
+    border-bottom: groove var(--pg-color);
+    transition: all .35s linear;
+}
+
+.burgerbox {
+    display: none;
+}
+
+.navdisplay {
+    animation: fadeIn .35s linear;
+    display: flex;
+}
+
+main {
+    padding: 1%;
+    height: 82vh;
+}
+.autocomplete
+{
+    width: 100%;
+}
+
+main section {
+    margin: 1%;
+}
+
+.adminlogin, .signmain {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.adminform {
+    width: 30vw;
+    padding: 1%;
+
+}
+
+.createform {
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 15%));
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    width: 50vw;
+    height: 45vh;
+
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.forgetpass {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.formsection {
+    box-shadow: 0 0 10px 10px #a0522d;
+    height: fit-content;
+    padding: 1%;
+}
+
+.addcampform {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 10%));
+    gap: 1%;
+    align-items: center;
+    width: 100%;
+}
+
+.camplist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 5vw));
+    gap: 5%;
+    align-items: center;
+    animation: fadeIn 1s linear;
+}
+
+.campcard, .carouseldiv {
+    padding: 1%;
+    box-shadow: 0 0 10px 10px #a0522d;
+    cursor: pointer;
+    background-color: #95e3c0;
+    color: #800000;
+    text-align: center;
+
+}
+
+.campcard div:first-child {
+    text-align: center;
+    font-size: 2em;
+}
+
+.campcard div:last-child {
+    font-size: 1.2em;
+    text-align: center;
+
+}
+
+.price {
+    color: #008000;
+    font-size: 2em;
+}
+
+.carousel {
+    width: 35vw;
+    padding: 1%;
+
+}
+
+.carouseldiv {
+    text-align: center;
+    font-size: 2em;
+    background-color: #95e3c0;
+    color: #800000;
+}
+
+.dividertitle {
+    color: white;
+}
+
+.emptyvalue {
+    font-size: 2em;
+    color: var(--pg-color);
+    word-spacing: 2vw;
+    text-align: center;
+}
+
+.bootcampdata {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bootcampdetails {
+    font-size: 1.2em;
+    padding: 1%;
+    box-shadow: 0 0 10px 10px #a0522d;
+
+}
+
+.usertablelist {
+    border: solid;
+    width: 50vw;
+}
+
+.supportpage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.supportpage div {
+    width: 50%;
+    padding: 2%;
+}
+
+blockquote, cite {
+    line-height: 2.6;
+    line-break: strict;
+    font-weight: bold;
+    text-shadow: 2px 0 #a0522d;
+}
+
+blockquote {
+    text-align: center;
+}
+
+cite {
+
+    border: dashed;
+    border-left: none;
+    border-right: none;
+    font-size: 3.4em;
+    word-break: break-all;
+}
+
+.supportform {
+    box-shadow: 0 0 10px 10px #a0522d;
+}
+
+.supportemail {
+    border: solid;
+}
+
+.complaintable {
+    border-collapse: collapse;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.even {
+    background-color: var(--sec-color);
+}
+
+th, td {
+    border: groove;
+    padding: 1%;
+    width: 1%;
+    white-space: pre-wrap;
+    text-align: justify;
+}
+
+/* for tablet devices */
+@media only screen and (max-width: 768px) {
+
+    .burgerbox {
+        display: block;
+        width: 20vw;
+    }
+
+    .burgerbox div {
+        border: solid 3px var(--pg-color);
+        margin: 5%;
+    }
+
+    nav {
+
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        top: 12%;
+        right: 0;
+        display: none;
+        background-color: var(--pg-color);
+        z-index: 1;
+    }
+
+    .adminform {
+        width: 100vw;
+    }
+
+    .adminposter {
+        display: none;
+    }
+
+    .links {
+        color: var(--sec-color);
+    }
+
+    .createform {
+        grid-template-columns: repeat(1, minmax(315px, 20%));
+    }
+
+    .formsection {
+        box-shadow: none;
+        height: fit-content;
+    }
+
+    .bootcampdata {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .supportpage {
+        flex-direction: column;
+    }
+
+    .supportpage div {
+        width: 100%;
+    }
+
+    cite {
+        font-size: 1.4em;
+    }
+
+    .table, .supportform {
+        overflow: scroll;
+    }
+
+}
