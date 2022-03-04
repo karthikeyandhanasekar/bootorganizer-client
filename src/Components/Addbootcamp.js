@@ -103,7 +103,7 @@ const Addbootcamp = () => {
                         </Form.Item>
 
                         {/* organizer number */}
-                        <Form.Item label="Number 1" required tooltip="Number1 is required" >
+                        <Form.Item label="Phone Number 1" required tooltip="Number1 is required" >
                             <Controller control={control}
                                 name="phone1"
                                 render={({ field }) =>
@@ -120,7 +120,7 @@ const Addbootcamp = () => {
                         </Form.Item>
 
                         {/* organizer number2 */}
-                        <Form.Item label="Number 2" required tooltip="Number is required" >
+                        <Form.Item label=" Phone Number 2" required tooltip="Number is required" >
                             <Controller control={control}
                                 name="phone2"
                                 render={({ field }) =>
