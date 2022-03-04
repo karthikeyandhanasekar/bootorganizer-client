@@ -7,6 +7,7 @@ const About = () => {
     return (
         <React.Fragment>
             <Header active="about" />
+            <br/>
             <main className='aboutmain'>
                 <section>
                     <p className='about'>BootOrganizer goal is to make sure the student/trainee as started with their ambitious carrer life.Students will be guided step-by-step through the process of paragraph writing using practice printables, writing notebook inserts, and anchor charts that they will be able to keep as references for the entire year. Those practice sheets will serve as anchor papers for all future writing.
@@ -19,7 +20,7 @@ const About = () => {
                         <a href='mailto:dkmailpratice@gmail.com'><strong>dkmailpratice@gmail.com</strong></a>
                     </section>
                 </section>
-                <section>
+                <section className='aboutposter'>
                     <img src={poster} alt='bootorganizer' />
                 </section>
             </main>

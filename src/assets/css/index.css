@@ -362,5 +362,12 @@ th, td {
     .table, .supportform {
         overflow: scroll;
     }
+    .aboutmain
+    {
+        margin-top: 50%;
+    }
+    .aboutposter {
+       display: none;
+    }
 
 }
