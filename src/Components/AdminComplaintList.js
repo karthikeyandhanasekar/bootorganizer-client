@@ -1,6 +1,8 @@
+import { Button } from "antd"
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import { retrivecomplaints } from "../apiCalls"
+import { toast } from "react-toastify"
+import { retrivecomplaints, updatecomplaintstatus } from "../apiCalls"
 import Header from "./Elements/Header"
 
 
@@ -20,6 +22,24 @@ const AdminComplaintList = () => {
             })
     }, [navigate])
 
+
+    const complaintresolve = async ({ id, email }) => {
+        try {
+
+            const onsuccess = () => {
+                toast.success("Resolved")
+                window.location.reload()
+            }
+            const result = await updatecomplaintstatus({
+                id: id,
+                email: email
+            })
+            result.message === "OK" ? onsuccess() : toast.error("failed")
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+
     return (
         <React.Fragment>
             <Header active={"complaint"} />
@@ -32,6 +52,8 @@ const AdminComplaintList = () => {
                                 <th>Email</th>
                                 <th>Query</th>
                                 <th>Date</th>
+                                <th>Status</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -42,6 +64,7 @@ const AdminComplaintList = () => {
                                         <td>{ele.email}</td>
                                         <td>{ele.query}</td>
                                         <td>{new Date(ele.createdAt).toLocaleString()}</td>
+                                        <td><Button type="danger" onClick={() => complaintresolve({ id: ele._id, email: ele.email })} >Resolve</Button></td>
                                     </tr>
 
                                 )

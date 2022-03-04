@@ -1,9 +1,9 @@
 
 import axios from 'axios'
 
-//const baseurl = `http://localhost:5000`
+const baseurl = `http://localhost:5000`
 
-const baseurl = 'https://bootorganizer-server.herokuapp.com'
+// const baseurl = 'https://bootorganizer-server.herokuapp.com'
 //store user first registration data
 export const createuser = async ({ name, password, email, state, city, phoneno }) => {
     return axios.post(`${baseurl}/signin`, { name, password, email, state, city, phoneno }).then(res => res.data)
@@ -58,14 +58,20 @@ export const verifytranscationdetails = async ({ email, id, name, bname }) => {
 }
 
 //register user complaint 
-export const userhelpsupport = async ({ email, query }) => {
-    return axios.post(`${baseurl}/support`, { email, query }).then(res => res.data)
+export const userhelpsupport = async ({ email, query, status }) => {
+    return axios.post(`${baseurl}/support`, { email, query, status }).then(res => res.data)
 }
 
 //retrive complaint list
 export const retrivecomplaints = async ({ id }) => {
     return axios.get(`${baseurl}/complaintlist/:${id}`).then(res => res.data)
 }
+
+//retrive complaint list
+export const updatecomplaintstatus = async ({ id, email }) => {
+    return axios.put(`${baseurl}/complaintlist/:${id}`, { id, email }).then(res => res.data)
+}
+
 
 
 //get bootcamp

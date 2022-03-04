@@ -78,7 +78,7 @@ const Header = ({ active }) => {
                             <Dropdown overlay={menu} placement="bottomCenter" className={`links ${active === 'login' ? 'active' : ''}`}>
                                 <p className='links'> Login </p>
                             </Dropdown>
-                            <Link to={"/signin"} className={`links ${active === 'signin' ? 'active' : ''}`}> Signin </Link>
+                            <Link to={"/signin"} className={`links ${active === 'signin' ? 'active' : ''}`}> SignUp </Link>
 
                         </React.Fragment>
                 }

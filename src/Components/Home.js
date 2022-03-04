@@ -44,7 +44,6 @@ const Home = () => {
         else {
             getbootcamp().then((res) => {
                 setcamplist(res.bootlist)
-                document.title = "Home"
                 setcompletebootcamplist([...res.bootlist])
 
 
@@ -95,7 +94,7 @@ const Home = () => {
 
                             login ?
                                 <React.Fragment>
-                                    <Divider orientation="left" style={dividerstyle} >Registered</Divider>
+                                    <Divider orientation="left" orientationMargin="0" style={dividerstyle} >Registered</Divider>
                                     <br />
                                     <div className="camplist">
                                         {
@@ -108,7 +107,7 @@ const Home = () => {
 
                                         }</div>
                                     <br />
-                                    <Divider orientation="left" style={dividerstyle} >Not Registered</Divider>
+                                    <Divider orientation="left" orientationMargin="0" style={dividerstyle} >Not Registered</Divider>
                                     <br />
                                     <div className="camplist">
                                         {

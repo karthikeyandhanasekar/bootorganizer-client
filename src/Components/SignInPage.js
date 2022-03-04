@@ -110,7 +110,7 @@ const SigninPage = () => {
                                 } />
                         </Form.Item>
                         <Button type="primary" style={{ background: '#FF2853' }} htmlType="submit">
-                            Sign in
+                            Sign Up
                         </Button>
                         <Button type="text" htmlType="reset">
                             Clear

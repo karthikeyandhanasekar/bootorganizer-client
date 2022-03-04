@@ -15,7 +15,8 @@ const Support = () => {
     const onsubmit = async (data) => {
         const result = await userhelpsupport({
             email: data.email,
-            query: data.query
+            query: data.query,
+            status: "pending"
         })
 
         result.message === "OK" ? toast.success("Complaint Raised") : toast.error("Error Occured")
