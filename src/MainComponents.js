@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom"
+import About from "./Components/about"
 import Addbootcamp from "./Components/Addbootcamp"
 import AdminCamplist from "./Components/AdminCamplist"
 import AdminComplaintList from "./Components/AdminComplaintList"
@@ -22,6 +23,7 @@ const MainComponents = () => {
             <Route path="/userlogin" element={<UserLogin />} />
             <Route path="/addcamp" element={<Addbootcamp />} />
             <Route path="/adminhomepage" element={<AdminCamplist />} />
+            <Route path="/about" element={<About />} />
 
             <Route path="/bootcamp/:id" element={<AdminUserList />} />
 
