@@ -5,7 +5,6 @@ import Campdetails from "./Elements/campdetails"
 import Header from "./Elements/Header"
 
 
-
 const Home = () => {
 
     const [login] = React.useState(!!sessionStorage.getItem("email"))
@@ -21,7 +20,6 @@ const Home = () => {
         if (login) {
             getuserhomepage({ id: sessionStorage.getItem("userid") }).then((res) => {
 
-                document.title = sessionStorage.getItem("name")
 
                 setcompletebootcamplist([...res.bootlist])
 
@@ -53,6 +51,7 @@ const Home = () => {
 
     }, [login])
 
+    document.title = sessionStorage.getItem("name")? sessionStorage.getItem("name") : "Home"
 
 
     const onsearch = (data) => {
